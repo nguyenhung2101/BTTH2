@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/tvAddTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="20dp"
+            android:text="@string/add_title"
+            android:textColor="@color/primary"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <!-- Tên khoản chi -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/expense_name_label"
+            android:textColor="@color/text_dark"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/edtExpenseName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:hint="@string/expense_name_hint"
+            android:inputType="text"
+            android:minHeight="48dp" />
+
+        <!-- Số tiền -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/expense_amount_label"
+            android:textColor="@color/text_dark"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/edtExpenseAmount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:hint="@string/expense_amount_hint"
+            android:inputType="number"
+            android:minHeight="48dp" />
+
+        <!-- Danh mục -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/expense_category_label"
+            android:textColor="@color/text_dark"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/spExpenseCategory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:entries="@array/categories_array"
+            android:minHeight="48dp" />
+
+        <!-- Ngày chi tiêu -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/expense_date_label"
+            android:textColor="@color/text_dark"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <DatePicker
+            android:id="@+id/dpExpenseDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:calendarViewShown="false"
+            android:datePickerMode="spinner" />
+
+        <!-- Ghi chú -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/expense_note_label"
+            android:textColor="@color/text_dark"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/edtExpenseNote"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:gravity="top|start"
+            android:hint="@string/expense_note_hint"
+            android:inputType="textMultiLine"
+            android:lines="3"
+            android:minHeight="48dp" />
+
+        <Button
+            android:id="@+id/btnSaveExpense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            android:text="@string/save_button"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+</ScrollView>
